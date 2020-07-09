@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Heading, Input, Button } from "@chakra-ui/core"
+import { Box, Heading, Input, Button, Text } from "@chakra-ui/core"
 const Newsletter = () => {
   return (
     <div>
@@ -22,9 +22,11 @@ const Newsletter = () => {
           width={{ base: "85%", lg: "70%" }}
           margin="0 auto"
         >
-          <Heading fontFamily="Inter" fontSize="2xl">
-            No Spam. Recieve curated collections
+          <Heading fontFamily="Inter" fontSize="3xl" fontWeight="600">
+            {" "}
+            Expand your knowldge every week
           </Heading>
+          <Text mt={2}>No spam. Recieve curated collections.</Text>
           <Box
             display="flex"
             alignItems="center"
