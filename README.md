@@ -9,22 +9,26 @@
 ## Features
 
 - Responsive layout
-- Modif
-- Blog posts created with GraphCMS's easy-to-use UI
+- Easyily add and edit posts with GraphCMS's easy-to-use UI
 - Tag-separted blog posts
-- Supports Multiple Authors
+- Supports multiple authors
 - Select Featured Posts
-- Editor's Pick Cards
+- Editor's Pick Section
 - Customizable theme
-- Styled with [Chakra-ui](https://chakra-ui.com/) theme and components
+- Styled with [Chakra-ui](https://chakra-ui.com/)'s theme and components
 - Blazing fast build time
 - Deployed to Netlify with caching configuration
+- Automatic Deploys with GitHub commit
+- Google Analytics
 
 #### Coming soon:
 
-- Dark Mode
-- Mailchimp support
-- Modify pages directly from GraphCMS
+- [ ] Incremental build
+- [x] Google Analytics
+- [ ] Dark Mode
+- [ ] Mailchimp support
+- [ ] Modify pages directly from GraphCMS
+- [ ] RSS feed
 
 ## Prerequisites
 
