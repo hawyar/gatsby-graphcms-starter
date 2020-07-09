@@ -1,6 +1,12 @@
 import React from "react"
 import { Box, Image, Badge, Text, Link } from "@chakra-ui/core"
-const Card = () => {
+import { Link as GatsbyLink } from "gatsby"
+import readingTime from "reading-time"
+
+const rTime = (text) => readingTime(text)
+
+const Card = ({ data }) => {
+  console.log(data)
   return (
     <div>
       <Box>
@@ -20,24 +26,25 @@ const Card = () => {
             fontSize="xs"
             letterSpacing="wide"
           >
-            Marketing
+            {data.tags[0]}
           </Badge>
           <Link
+            as={GatsbyLink}
             mt={3}
             display="block"
             fontSize="3xl"
             lineHeight="normal"
             fontWeight="semibold"
-            href="#"
+            to={`/posts/${data.slug}`}
           >
-            Finding customers for your new business
+            {data.title}
           </Link>
           <Text color="gray.300" mt={6}>
-            Getting a new business off the ground is a lot of hard work. Here
-            are five ideas you can use to find your first customers.
+            {data.excerpt}
           </Text>
-          <Text mt={6} fontSize="xs">
-            10 MAR 2019 • 1 Minute read{" "}
+          <Text mt={6} fontSize="xs" fontWeight="400">
+            {data.publishedAt.split("T")[0]} •{" "}
+            {Math.ceil(rTime(data.content.text).minutes)} Minute read
           </Text>
           {/* <Flex mt={8}>
             <Avatar size="md" src="https://bit.ly/sage-adebayo" />

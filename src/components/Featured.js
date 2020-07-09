@@ -29,7 +29,6 @@ const Featured = () => (
     `}
     render={(data) => (
       <div>
-        {console.log(data)}
         <Box
           as="article"
           pt={12}

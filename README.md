@@ -24,7 +24,7 @@
 #### Coming soon:
 
 - [ ] Incremental build
-- [x] Google Analytics
+- [x] ~~Google Analytics~~
 - [ ] Dark Mode
 - [ ] Mailchimp support
 - [ ] Modify pages directly from GraphCMS

@@ -6,7 +6,6 @@ import { StaticQuery, graphql } from "gatsby"
 const EditorsPick = () => {
   return (
     <div>
-      {/* <StaticQuery query={graphql``} /> */}
       <Box
         as="article"
         pt={12}
@@ -17,8 +16,34 @@ const EditorsPick = () => {
         color="white"
       >
         <Grid gridTemplateColumns="1fr 1fr" gridColumnGap="20">
-          <Card />
-          <Card />
+          <StaticQuery
+            query={graphql`
+              {
+                gcms {
+                  posts(where: { editorsPick: true }) {
+                    slug
+                    excerpt
+                    title
+                    publishedAt
+                    tags
+                    coverImage {
+                      url(
+                        transformation: { image: { resize: { width: 1400 } } }
+                      )
+                    }
+                    content {
+                      text
+                    }
+                  }
+                }
+              }
+            `}
+            render={(data) =>
+              data.gcms.posts.map((data) => {
+                return <Card data={data} />
+              })
+            }
+          />
         </Grid>
       </Box>
     </div>

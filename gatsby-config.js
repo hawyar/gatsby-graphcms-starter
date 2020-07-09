@@ -12,14 +12,14 @@ module.exports = {
   },
 
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // GA makes multiple request per user during a single session. It might affect your site's performance
-        // make sure GOOGLE_ANALYTICS exists in your local .env
-        // trackingId: process.env.GOOGLE_ANALYTICS,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // GA makes multiple request per user during a single session. It might affect your site's performance
+    //     // make sure GOOGLE_ANALYTICS exists in your local .env
+    //     // trackingId: process.env.GOOGLE_ANALYTICS,
+    //   },
+    // },
     {
       resolve: "gatsby-source-graphql",
       options: {
