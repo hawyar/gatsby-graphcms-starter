@@ -2,11 +2,7 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { Link, Box, Button } from "@chakra-ui/core"
 import Headroom from "react-headroom"
-const MenuItems = ({ children, to }) => (
-  <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" href={to}>
-    {children}
-  </Link>
-)
+
 const Nav = () => {
   return (
     <div>
@@ -26,9 +22,21 @@ const Nav = () => {
           alignItems="center"
         >
           <Box display="flex">
-            <MenuItems to="/">Home</MenuItems>
-            <MenuItems to="/">Blog</MenuItems>
-            <MenuItems to="/">About </MenuItems>
+            <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" to="/">
+              Home
+            </Link>
+            <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" to="/blog">
+              Blog
+            </Link>
+            <Link
+              mr={6}
+              as={GatsbyLink}
+              color="white"
+              fontSize="sm"
+              to="/about"
+            >
+              About
+            </Link>
           </Box>
 
           <div>

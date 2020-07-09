@@ -3,7 +3,7 @@ import { Heading, Image, Box, Text, Badge } from "@chakra-ui/core"
 import { graphql } from "gatsby"
 import Nav from "../components/Nav"
 import readingTime from "reading-time"
-
+import Footer from "../components/Footer"
 const rTime = (text) => readingTime(text)
 
 const BlogPost = ({
@@ -64,6 +64,7 @@ const BlogPost = ({
           ></div>
         </Box>
       </Box>
+      <Footer />
     </div>
   )
 }
