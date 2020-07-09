@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Divider, Flex } from "@chakra-ui/core"
+import { Box, Divider, Grid } from "@chakra-ui/core"
 import Card from "./Card"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -10,20 +10,16 @@ const EditorsPick = () => {
       <Box
         as="article"
         pt={12}
-        pb={12}
         display="flex"
         flexDirection="column"
         width={{ base: "85%", lg: "70%" }}
         margin="0 auto"
         color="white"
       >
-        <Flex
-          flexDirection={{ base: "column", lg: "row" }}
-          justify="space-between"
-        >
+        <Grid gridTemplateColumns="1fr 1fr" gridColumnGap="20">
           <Card />
           <Card />
-        </Flex>
+        </Grid>
       </Box>
     </div>
   )

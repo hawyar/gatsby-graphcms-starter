@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Heading, Input, Button, Text } from "@chakra-ui/core"
+import { Box, Heading, Input, Button, Text, Divider } from "@chakra-ui/core"
 const Newsletter = () => {
   return (
     <div>
@@ -14,6 +14,7 @@ const Newsletter = () => {
         bg="#191b1f"
         textAlign="center"
       >
+        <Divider width={{ base: "85%", lg: "70%" }} margin="0 auto" mb={12} />
         <Box
           rounded="md"
           pt={24}
