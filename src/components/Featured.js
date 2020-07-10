@@ -8,7 +8,7 @@ const rTime = (text) => readingTime(text)
 const Featured = () => (
   <StaticQuery
     query={graphql`
-      query MyQuery {
+      query Featured {
         gcms {
           posts(where: { homePageFeatured: true }) {
             slug

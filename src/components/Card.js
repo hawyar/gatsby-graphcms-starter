@@ -15,7 +15,7 @@ const Card = ({ data }) => {
             width={{ base: "430px", xs: "100%" }}
             height="240px"
             objectFit="cover"
-            src="https://images.unsplash.com/photo-1525770041010-2a1233dd8152?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+            src={data.coverImage.url}
             alt="Protests"
           />
         </Box>
@@ -26,7 +26,7 @@ const Card = ({ data }) => {
             fontSize="xs"
             letterSpacing="wide"
           >
-            {data.tags[0]}
+            {data.tags}
           </Badge>
           <Link
             as={GatsbyLink}
@@ -46,13 +46,6 @@ const Card = ({ data }) => {
             {data.publishedAt.split("T")[0]} •{" "}
             {Math.ceil(rTime(data.content.text).minutes)} Minute read
           </Text>
-          {/* <Flex mt={8}>
-            <Avatar size="md" src="https://bit.ly/sage-adebayo" />
-            <Box ml="3">
-              <Text fontWeight="bold">Segun Adebayo</Text>
-              <Text fontSize="sm">UI Engineer</Text>
-            </Box>
-          </Flex> */}
         </Box>
       </Box>
     </div>
