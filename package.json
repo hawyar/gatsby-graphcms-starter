@@ -22,12 +22,11 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "comma-number": "^2.0.1",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
     "framer-motion": "^1.10.3",
     "gatsby": "^2.20.12",
-    "gatsby-cli": "^2.12.59",
+    "gatsby-cli": "^2.12.60",
     "gatsby-plugin-chakra-ui": "^0.1.4",
     "gatsby-plugin-google-analytics": "^2.3.10",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -47,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hawyar/covid-19-gatsby.git"
+    "url": "https://github.com/hawyar/gatsby-graphcms-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/hawyar/covid-19-gatsby/issues"
+    "url": "https://github.com/hawyar/gatsby-graphcms-starter/issues"
   }
 }
