@@ -3,6 +3,7 @@ import Nav from "../components/Nav"
 import { Heading, Box, Grid } from "@chakra-ui/core"
 import Card from "../components/Card"
 import Footer from "../components/Footer"
+import { graphql } from "gatsby"
 const blog = ({ data }) => {
   console.log(data)
   return (
