@@ -1,15 +1,15 @@
-# Gatsby + GraphCMS Starter 📖 (In progress)
+# Gatsby + GraphCMS Starter 📖
 
 ## [![Netlify Status](https://api.netlify.com/api/v1/badges/9290ce86-d12c-45db-adb8-7a5ffbcf750a/deploy-status)](https://app.netlify.com/sites/zealous-beaver-db067f/deploys)
 
-> A Gatsby blog starter using GraphCMS as a headless cms
+> A Gatsby blog starter using GraphCMS as a headless cms.
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/) features.
+Live Demo: https://gatsby-graphcms.netlify.app
 
 ## Features
 
-- Responsive layout
-- Easyily add and edit posts with GraphCMS's easy-to-use UI
+- Webhooks - automatic production deploy after new post
+- Easily add and edit posts with GraphCMS's easy-to-use UI
 - Tag-separted blog posts
 - Supports multiple authors
 - Select Featured Posts
@@ -20,15 +20,16 @@
 - Deployed to Netlify with caching configuration
 - Automatic Deploys with GitHub commit
 - Google Analytics
+- Responsive layout
 
 #### Coming soon:
 
-- [ ] Incremental build
 - [x] ~~Google Analytics~~
+- [ ] RSS feed
+- [ ] Incremental build
 - [ ] Dark Mode
 - [ ] Mailchimp support
 - [ ] Modify pages directly from GraphCMS
-- [ ] RSS feed
 
 ## Prerequisites
 
@@ -70,11 +71,10 @@ Open http://localhost:8000/___graphql for GraphiQL
 
 1. Rename `.env.Example` to `.env` and make sure it is ignored in your `.gitignore` file.
 
-2. Log in to your GraphCMS account and get your API Access Key.
-   > Go to **Settings** > **API Access** > **Endpoints**
+2. Log in to your GraphCMS account and get your API Access Key. (**Settings** > **API Access** > **Endpoints**)
 3. Copy the url and paste it in the .env file
 
-The `.env` should look like this
+The `.env` file should look like this
 
 ```js
 GRAPH_CMS_KEY = PLACE_KEY_HERE
@@ -87,8 +87,6 @@ GRAPH_CMS_KEY = PLACE_KEY_HERE
 
 **Note**: GraphCMS allows us to fetch DRAFT and PUBSLISHED posts. For production only check the PUBSLISHED box.
 
----
-
 ## Contributing
 
 1. Fork the repository.
@@ -96,3 +94,7 @@ GRAPH_CMS_KEY = PLACE_KEY_HERE
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+## Changes
+
+**Note**: This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/) features.
