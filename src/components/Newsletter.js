@@ -1,10 +1,16 @@
 import React from "react"
 import { Box, Heading, Input, Button, Text, Divider } from "@chakra-ui/core"
+import { useForm } from "react-hook-form"
+
 const Newsletter = () => {
+  const { register, handleSubmit, errors } = useForm()
+  //  for now only log the input
+  // setup mailchimp
+  const onSubmit = (data) => console.log(data)
+
   return (
     <div>
       <Box
-        as="article"
         pt={20}
         pb={20}
         pl={{ sm: 6 }}
@@ -39,22 +45,29 @@ const Newsletter = () => {
             mt={12}
             flexDirection={{ base: "row", sm: "column" }}
           >
-            <Input
-              width={{ base: "100%", md: "45%" }}
-              variant="outline"
-              placeholder="Email Address"
-              rounded="sm"
-            />
-            <Button
-              fontSize="sm"
-              size="md"
-              color="gray.700"
-              rounded="sm"
-              width="auto"
-              mt={6}
-            >
-              Sign me up
-            </Button>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Input
+                width={{ base: "100%", md: "100%" }}
+                variant="outline"
+                placeholder="Email Address"
+                rounded="sm"
+                color="gray.700"
+                name="EmailAddress"
+                ref={register({ required: true })}
+              />
+              {errors.EmailAddress && <span>Email Address is required</span>}
+              <Button
+                fontSize="sm"
+                size="md"
+                color="gray.700"
+                rounded="sm"
+                width="auto"
+                type="submit"
+                mt={6}
+              >
+                Sign me up
+              </Button>
+            </form>
           </Box>
         </Box>
       </Box>

@@ -24,6 +24,7 @@ const EditorsPick = () => {
                     slug
                     excerpt
                     title
+                    id
                     publishedAt
                     tags
                     coverImage {
@@ -40,7 +41,7 @@ const EditorsPick = () => {
             `}
             render={(data) =>
               data.gcms.posts.map((data) => {
-                return <Card data={data} />
+                return <Card data={data} key={data.id} />
               })
             }
           />

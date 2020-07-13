@@ -30,6 +30,7 @@ Live Demo: https://gatsby-graphcms.netlify.app
 - [ ] Dark Mode
 - [ ] Mailchimp support
 - [ ] Modify pages directly from GraphCMS
+- [ ] A/B testing with Google Analytics
 
 ## Prerequisites
 

@@ -6,7 +6,6 @@ import readingTime from "reading-time"
 const rTime = (text) => readingTime(text)
 
 const Card = ({ data }) => {
-  console.log(data)
   return (
     <div>
       <Box>
