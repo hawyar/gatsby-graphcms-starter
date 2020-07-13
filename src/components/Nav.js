@@ -33,6 +33,15 @@ const Nav = () => {
               as={GatsbyLink}
               color="white"
               fontSize="sm"
+              to="/authors"
+            >
+              Authors
+            </Link>
+            <Link
+              mr={6}
+              as={GatsbyLink}
+              color="white"
+              fontSize="sm"
               to="/about"
             >
               About

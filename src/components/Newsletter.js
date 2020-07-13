@@ -7,6 +7,8 @@ const Newsletter = () => {
         as="article"
         pt={20}
         pb={20}
+        pl={{ sm: 6 }}
+        pr={{ sm: 6 }}
         display="flex"
         flexDirection="column"
         margin="0 auto"
@@ -17,7 +19,7 @@ const Newsletter = () => {
         <Divider width={{ base: "85%", lg: "70%" }} margin="0 auto" mb={12} />
         <Box
           rounded="md"
-          pt={24}
+          pt={20}
           pb={24}
           bg="#07070b"
           width={{ base: "85%", lg: "70%" }}
@@ -32,12 +34,13 @@ const Newsletter = () => {
             display="flex"
             alignItems="center"
             justifyContent="space-between"
-            width="45%"
+            width="70%"
             margin="0 auto"
             mt={12}
+            flexDirection={{ base: "row", sm: "column" }}
           >
             <Input
-              width={{ base: "100%", lg: "70%" }}
+              width={{ base: "100%", md: "45%" }}
               variant="outline"
               placeholder="Email Address"
               rounded="sm"
@@ -48,6 +51,7 @@ const Newsletter = () => {
               color="gray.700"
               rounded="sm"
               width="auto"
+              mt={6}
             >
               Sign me up
             </Button>

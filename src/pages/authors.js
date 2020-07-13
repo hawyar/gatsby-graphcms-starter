@@ -1,17 +1,18 @@
 import React from "react"
 import Nav from "../components/Nav"
 import { Heading, Box, Grid } from "@chakra-ui/core"
-import Card from "../components/Card"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
-const blog = ({ data }) => {
+import AuthorCard from "../components/AuthorCard"
+const author = ({ data }) => {
+  console.log(data)
   return (
     <div>
       <Nav />
       <Box bg="#191b1f" color="white">
         <Box pt={20} pb={20} width={{ base: "85%", lg: "70%" }} margin="0 auto">
           {" "}
-          <Heading>The Collections</Heading>
+          <Heading>Our creative team</Heading>
           <Grid
             mt={8}
             width="100%"
@@ -19,8 +20,8 @@ const blog = ({ data }) => {
             gridColumnGap="20"
             gridRowGap="16"
           >
-            {data.gcms.posts.map((data) => {
-              return <Card data={data} />
+            {data.gcms.authors.map((author) => {
+              return <AuthorCard data={author} key={author.name} />
             })}
           </Grid>
         </Box>
@@ -30,25 +31,31 @@ const blog = ({ data }) => {
   )
 }
 
-export default blog
+export default author
 
 // we can do page query
 export const query = graphql`
   {
     gcms {
-      posts(stage: PUBLISHED) {
-        slug
-        excerpt
-        title
-        publishedAt
-        tags
-        coverImage {
-          url(transformation: { image: { resize: { width: 1400 } } })
-        }
-        content {
-          text
+      authors(where: { isActive: true }) {
+        name
+        id
+        bibliography
+        picture {
+          url(transformation: { image: { resize: { width: 100 } } })
         }
       }
     }
   }
 `
+
+//graphql query
+// query AuthorsQuery {
+//     authors(where: {isActive: true}) {
+//       name
+//       bibliography
+//       picture {
+//         url(transformation: {image: {resize: {fit: clip, width: 250}}})
+//       }
+//     }
+//   }

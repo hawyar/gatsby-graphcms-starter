@@ -17,6 +17,8 @@ const Footer = () => {
           width={{ base: "85%", lg: "70%" }}
           margin="0 auto"
           alignItems="center"
+          display={{ sm: "flex" }}
+          flexDirection={{ base: "column", md: "row" }}
         >
           <Box display="flex">
             <MenuItems to="/">Twitter</MenuItems>
@@ -24,7 +26,12 @@ const Footer = () => {
             <MenuItems to="/">About</MenuItems>
           </Box>
 
-          <Text fontSize="sm" color="white">
+          <Text
+            fontSize="sm"
+            color="white"
+            textAlign={{ sm: "center" }}
+            pt={{ base: 2 }}
+          >
             {" "}
             Footer notice © 2020 | Powered by Graph<strong>cms</strong>
           </Text>

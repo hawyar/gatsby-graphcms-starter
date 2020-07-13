@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Divider, Grid } from "@chakra-ui/core"
+import { Box, Grid } from "@chakra-ui/core"
 import Card from "./Card"
 import { StaticQuery, graphql } from "gatsby"
 
