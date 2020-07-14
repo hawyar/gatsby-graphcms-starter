@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config()
 }
+const { buildSchema, buildClientSchema } = require("graphql")
 
 const path = require("path")
 
@@ -69,9 +70,11 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "GCMS",
-
         fieldName: "gcms",
-
+        batch: true,
+        dataLoaderOptions: {
+          maxBatchSize: 10,
+        },
         url: process.env.GRAPH_CMS_KEY,
       },
     },
