@@ -54,7 +54,6 @@ module.exports = {
           {
             serialize: ({ query: { site, gcms } }) => {
               return gcms.posts.map((post) => {
-                console.log(post)
                 return Object.assign(
                   {},
                   {
@@ -105,6 +104,13 @@ module.exports = {
     //   },
     // },
     {
+      resolve: "gatsby-plugin-webpack-bundle-analyzer",
+      options: {
+        analyzerPort: 3000,
+        production: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         resolveEnv: () => NETLIFY_ENV,
@@ -145,6 +151,15 @@ module.exports = {
           `source sans pro\:300,400,400i,700`, // specify font weights and styles
         ],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
       },
     },
     {
