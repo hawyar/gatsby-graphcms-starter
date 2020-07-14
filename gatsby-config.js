@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const path = require("path")
-// const metaImage = require("./src/metImage.png")
 
 const {
   NODE_ENV,
@@ -20,7 +19,15 @@ module.exports = {
     description: `Gatsby + GraphCMS Blog Starter`,
     author: `@Hawyar`,
     siteUrl,
-    keywords: ["Blog", "GraphCMS", "Starter"],
+    keywords: [
+      "Blog",
+      "GraphCMS",
+      "minute",
+      "relations",
+      "seo",
+      "union types",
+      "relations with graphcms	",
+    ],
     social: {
       twitter: `https://twitter.com/HawyarFarooq`,
     },
@@ -87,12 +94,12 @@ module.exports = {
         isUsingColorMode: false,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `${__dirname}/src/pages/`,
+    //   },
+    // },
   ],
 }
