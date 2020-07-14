@@ -90,6 +90,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-custom-api",
+      options: {
+        url: process.env.GRAPH_CMS_KEY,
+      },
+    },
+    {
       resolve: "gatsby-plugin-chakra-ui",
       options: {
         isResettingCSS: true,

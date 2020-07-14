@@ -15,6 +15,10 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)
 
+  if (!posts) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+  }
+
   posts.forEach(({ id, slug }) => {
     createPage({
       path: `/posts/${slug}`,
