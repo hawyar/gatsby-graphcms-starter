@@ -1,8 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config()
 }
-const { buildSchema, buildClientSchema } = require("graphql")
-
+require("dotenv").config
 const path = require("path")
 
 const {
@@ -36,6 +35,66 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, gcms } }) => {
+              return gcms.posts.map((post) => {
+                console.log(post)
+                return Object.assign(
+                  {},
+                  {
+                    title: post.title,
+                    description: post.excerpt,
+                    date: post.publishedt,
+                    url: site.siteMetadata.siteUrl + post.slug,
+                    guid: site.siteMetadata.siteUrl + post.slug,
+                    custom_elements: [{ "content:encoded": post.content.html }],
+                  }
+                )
+              })
+            },
+            query: `
+            {
+              gcms {
+            posts(stage: PUBLISHED, orderBy: publishedAt_DESC) {
+              title
+              excerpt
+              slug
+              content {
+                html
+              }
+              author {
+              name
+              }
+              publishedAt
+            }
+          }
+
+            }
+            
+            `,
+            output: "/rss.xml",
+            match: "^/blog/",
+            title: "Gatsby + GraphCMS's Blog - RSS Feed",
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sitemap`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
@@ -72,10 +131,9 @@ module.exports = {
         typeName: "GCMS",
         fieldName: "gcms",
         batch: true,
-        dataLoaderOptions: {
-          maxBatchSize: 10,
-        },
-        url: process.env.GRAPH_CMS_KEY,
+        url:
+          process.env.GRAPH_CMS_KEY ||
+          `https://api-us-east-1.graphcms.com/v2/ckccyan400myy01z03afjg08y/master`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -92,7 +150,9 @@ module.exports = {
     {
       resolve: "gatsby-source-custom-api",
       options: {
-        url: process.env.GRAPH_CMS_KEY,
+        url:
+          process.env.GRAPH_CMS_KEY ||
+          `https://api-us-east-1.graphcms.com/v2/ckccyan400myy01z03afjg08y/master`,
       },
     },
     {
