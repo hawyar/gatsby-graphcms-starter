@@ -1,4 +1,4 @@
-# Gatsby + GraphCMS Starter 📖
+# Gatsby + GraphCMS Blog Starter 📖
 
 ## [![Netlify Status](https://api.netlify.com/api/v1/badges/9290ce86-d12c-45db-adb8-7a5ffbcf750a/deploy-status)](https://app.netlify.com/sites/zealous-beaver-db067f/deploys)
 

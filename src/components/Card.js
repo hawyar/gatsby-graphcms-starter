@@ -11,14 +11,14 @@ const Card = ({ data }) => {
       <Box>
         <Box>
           <Image
-            width={{ base: "430px", xs: "100%" }}
-            height="240px"
+            height="auto"
+            width="100%"
             objectFit="cover"
             src={data.coverImage.url}
             alt="Protests"
           />
         </Box>
-        <Box mt={3} width="430px">
+        <Box mt={3} width="100%">
           <Badge
             fontWeight="bold"
             textTransform="uppercase"
@@ -28,6 +28,7 @@ const Card = ({ data }) => {
             {data.tags}
           </Badge>
           <Link
+            color="white"
             as={GatsbyLink}
             mt={3}
             display="block"

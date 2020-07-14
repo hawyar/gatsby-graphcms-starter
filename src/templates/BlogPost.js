@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Nav from "../components/Nav"
 import readingTime from "reading-time"
 import Footer from "../components/Footer"
+import SEO from "../components/SEO"
 const rTime = (text) => readingTime(text)
 
 const BlogPost = ({
@@ -13,6 +14,10 @@ const BlogPost = ({
 }) => {
   return (
     <div>
+      <SEO
+        title={post.title}
+        description={post.excerpt || post.content.text.substring(0, 25)}
+      />
       <Nav />
       <Box width={{ base: "85%", lg: "70%" }} margin="0 auto" mt={12} mb={12}>
         {post.tags.map((el) => (

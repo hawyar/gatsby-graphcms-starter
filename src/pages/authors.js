@@ -4,11 +4,13 @@ import { Heading, Box, Grid } from "@chakra-ui/core"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import AuthorCard from "../components/AuthorCard"
+import SEO from "../components/SEO"
 const author = ({ data }) => {
   console.log(data)
   return (
     <div>
       <Nav />
+      <SEO title="All Authors" />
       <Box bg="#191b1f" color="white">
         <Box pt={20} pb={20} width={{ base: "85%", lg: "70%" }} margin="0 auto">
           {" "}

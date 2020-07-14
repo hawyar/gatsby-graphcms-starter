@@ -3,6 +3,10 @@ import { Link as GatsbyLink } from "gatsby"
 import { Link, Box, Button } from "@chakra-ui/core"
 import Headroom from "react-headroom"
 
+const activeStyles = {
+  bg: "red.500",
+  color: "red",
+}
 const Nav = () => {
   return (
     <div>
@@ -22,7 +26,14 @@ const Nav = () => {
           alignItems="center"
         >
           <Box display="flex">
-            <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" to="/">
+            <Link
+              mr={6}
+              as={GatsbyLink}
+              color="white"
+              fontSize="sm"
+              to="/"
+              activeStyles={activeStyles}
+            >
               Home
             </Link>
             <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" to="/blog">

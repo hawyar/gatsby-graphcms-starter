@@ -8,8 +8,8 @@ const Content = () => {
     <div>
       <Box maxWidth="100vw" height="auto" background="#191b1f">
         <Featured />
-        <LargeCard />
         <EditorsPick />
+        <LargeCard />
       </Box>
     </div>
   )

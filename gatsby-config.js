@@ -1,17 +1,34 @@
-// if (process.env.NODE_ENV !== "production") {
-//   require("dotenv").config()
-// }
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config()
+}
 
-require("dotenv").config()
+const path = require("path")
+// const metaImage = require("./src/metImage.png")
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://gatsby-graphcms.netlify.app",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
     title: `Gatsby + GraphCMS Blog`,
     description: `Gatsby + GraphCMS Blog Starter`,
     author: `@Hawyar`,
+    siteUrl,
+    keywords: ["Blog", "GraphCMS", "Starter"],
+    social: {
+      twitter: `https://twitter.com/HawyarFarooq`,
+    },
+    image: path.resolve(`./src/metImage.png`),
   },
 
   plugins: [
+    `gatsby-plugin-sitemap`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -20,6 +37,27 @@ module.exports = {
     //     // trackingId: process.env.GOOGLE_ANALYTICS,
     //   },
     // },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
     {
       resolve: "gatsby-source-graphql",
       options: {
@@ -30,12 +68,13 @@ module.exports = {
         url: process.env.GRAPH_CMS_KEY,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `limelight`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `source sans pro\:300,400,400i,700`, // specify font weights and styles
         ],
         display: "swap",
       },
@@ -44,6 +83,7 @@ module.exports = {
       resolve: "gatsby-plugin-chakra-ui",
       options: {
         isResettingCSS: true,
+        // dark mode works but only after a page refresh. Feel free to make a PR
         isUsingColorMode: false,
       },
     },

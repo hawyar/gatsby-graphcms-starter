@@ -33,7 +33,7 @@ const LargeCard = () => {
             <Box
               as="article"
               pt={12}
-              pb={12}
+              // pb={12}
               display="flex"
               flexDirection="column"
               width={{ base: "85%", lg: "70%" }}
@@ -43,7 +43,7 @@ const LargeCard = () => {
               <Box>
                 <Image
                   width="100%"
-                  height="450px"
+                  height={{ sm: "250px", md: "390px" }}
                   objectFit="cover"
                   src={data.gcms.posts[0].coverImage.url}
                   alt="Protests"
@@ -78,13 +78,6 @@ const LargeCard = () => {
                   {Math.ceil(rTime(data.gcms.posts[0].content.text).minutes)}{" "}
                   Minute
                 </Text>
-                {/* <Flex mt={8}>
-            <Avatar size="md" src="https://bit.ly/sage-adebayo" />
-            <Box ml="3">
-              <Text fontWeight="bold">Segun Adebayo</Text>
-              <Text fontSize="sm">UI Engineer</Text>
-            </Box>
-          </Flex> */}
               </Box>
             </Box>
           </div>

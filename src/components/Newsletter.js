@@ -31,7 +31,14 @@ const Newsletter = () => {
           width={{ base: "85%", lg: "70%" }}
           margin="0 auto"
         >
-          <Heading fontFamily="Inter" fontSize="3xl" fontWeight="600">
+          <Heading
+            fontFamily="Inter"
+            fontSize="3xl"
+            fontWeight="600"
+            width="85%"
+            textAlign="center"
+            margin="0 auto"
+          >
             {" "}
             Expand your knowldge every week
           </Heading>
@@ -40,33 +47,37 @@ const Newsletter = () => {
             display="flex"
             alignItems="center"
             justifyContent="space-between"
-            width="70%"
             margin="0 auto"
+            width="100%"
             mt={12}
-            flexDirection={{ base: "row", sm: "column" }}
+            flexDirection="column"
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input
-                width={{ base: "100%", md: "100%" }}
                 variant="outline"
                 placeholder="Email Address"
-                rounded="sm"
-                color="gray.700"
                 name="EmailAddress"
                 ref={register({ required: true })}
-              />
-              {errors.EmailAddress && <span>Email Address is required</span>}
-              <Button
-                fontSize="sm"
-                size="md"
                 color="gray.700"
-                rounded="sm"
-                width="auto"
-                type="submit"
-                mt={6}
-              >
-                Sign me up
-              </Button>
+                width={{ sm: "100%", lg: "340px" }}
+              />
+
+              <Box display="flex" flexDirection="column">
+                {errors.EmailAddress && <span>Email Address is required</span>}
+                <Button
+                  alignSelf="center"
+                  display="block"
+                  fontSize="sm"
+                  size="md"
+                  color="gray.700"
+                  rounded="sm"
+                  width="auto"
+                  type="submit"
+                  mt={6}
+                >
+                  Sign me up
+                </Button>
+              </Box>
             </form>
           </Box>
         </Box>

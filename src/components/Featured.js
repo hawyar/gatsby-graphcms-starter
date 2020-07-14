@@ -1,6 +1,15 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { Box, Image, Text, Link, Badge, Divider } from "@chakra-ui/core"
+import {
+  Box,
+  Image,
+  Text,
+  Link,
+  Badge,
+  Divider,
+  Flex,
+  Avatar,
+} from "@chakra-ui/core"
 import readingTime from "reading-time"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -23,6 +32,13 @@ const Featured = () => (
               text
             }
             homePageFeatured
+            author {
+              picture {
+                url(transformation: { image: { resize: { width: 120 } } })
+              }
+              name
+              bibliography
+            }
           }
         }
       }
@@ -41,10 +57,10 @@ const Featured = () => (
           <Box>
             <Image
               width="1400px"
-              height="390px"
+              height={{ sm: "250px", md: "390px" }}
               objectFit="cover"
               src={data.gcms.posts[0].coverImage.url}
-              alt="Protests"
+              alt="Featured Image"
             />
           </Box>
           <Box mt={{ base: 6, lg: 0 }} ml={{ base: 0, lg: 6 }}>
@@ -76,6 +92,15 @@ const Featured = () => (
               {Math.ceil(rTime(data.gcms.posts[0].content.text).minutes)} Minute
               read
             </Text>
+            <Flex mt={8}>
+              <Avatar size="md" src={data.gcms.posts[0].author.picture.url} />
+              <Box ml="3">
+                <Text fontWeight="bold">{data.gcms.posts[0].author.name}</Text>
+                <Text fontSize="sm">
+                  {data.gcms.posts[0].author.bibliography}
+                </Text>
+              </Box>
+            </Flex>
           </Box>
         </Box>
 

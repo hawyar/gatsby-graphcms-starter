@@ -4,10 +4,12 @@ import { Heading, Box, Grid } from "@chakra-ui/core"
 import Card from "../components/Card"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 const blog = ({ data }) => {
   return (
     <div>
       <Nav />
+      <SEO title="All Posts" />
       <Box bg="#191b1f" color="white">
         <Box pt={20} pb={20} width={{ base: "85%", lg: "70%" }} margin="0 auto">
           {" "}

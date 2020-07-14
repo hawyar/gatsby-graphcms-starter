@@ -11,11 +11,15 @@ const EditorsPick = () => {
         pt={12}
         display="flex"
         flexDirection="column"
-        width={{ base: "85%", lg: "70%" }}
         margin="0 auto"
-        color="white"
+        width={{ base: "85%", lg: "70%" }}
       >
-        <Grid gridTemplateColumns="1fr 1fr" gridColumnGap="20">
+        <Grid
+          gridTemplateColumns={{ sm: "1fr", md: "1fr 1fr" }}
+          gridTemplateRows={{ sm: "1fr", base: "1fr 1fr" }}
+          margin="0 auto"
+          gridColumnGap="90px"
+        >
           <StaticQuery
             query={graphql`
               {
@@ -41,7 +45,11 @@ const EditorsPick = () => {
             `}
             render={(data) =>
               data.gcms.posts.map((data) => {
-                return <Card data={data} key={data.id} />
+                return (
+                  <div key={data.slug}>
+                    <Card data={data} />
+                  </div>
+                )
               })
             }
           />
