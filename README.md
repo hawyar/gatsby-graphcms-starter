@@ -2,33 +2,27 @@
 
 ## [![Netlify Status](https://api.netlify.com/api/v1/badges/9290ce86-d12c-45db-adb8-7a5ffbcf750a/deploy-status)](https://app.netlify.com/sites/zealous-beaver-db067f/deploys)
 
-> A Gatsby blog starter using GraphCMS as a headless cms.
-
 Live Demo: https://gatsby-graphcms.netlify.app
 
 ## Features
 
-- Customizable theme
+- Deployed to Netlify
+- Styled with [Chakra-ui](https://chakra-ui.com/)'s base theme and components
 - Tag-separted blog posts
 - Webhooks - automatic production deploy after new post
 - Easily add, edit, delete posts with GraphCMS's easy-to-use UI
 - Supports multiple authors
 - Featured posts section
 - Editor's chioce section
-
-- Editor's Pick Section
-- Customizable theme
-- Styled with [Chakra-ui](https://chakra-ui.com/)'s theme and components
 - Blazing fast build time
-- Deployed to Netlify with caching configuration
 - Automatic Deploys with GitHub commit
 - Google Analytics
-- Responsive layout
+- RSS feed
 
-#### In progress:
+### In progress:
 
 - [x] ~~Google Analytics~~
-- [ ] RSS feed
+- [x] ~~RSS feed~~
 - [ ] Incremental build
 - [ ] Dark Mode
 - [ ] Mailchimp support
