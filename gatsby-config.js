@@ -98,7 +98,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
-    //     // GA makes multiple request per user during a single session. It might affect your site's performance
+    //     // GA makes multiple request per user per session. It might affect performance
     //     // make sure GOOGLE_ANALYTICS exists in your local .env
     //     // trackingId: process.env.GOOGLE_ANALYTICS,
     //   },
@@ -137,39 +137,11 @@ module.exports = {
         typeName: "GCMS",
         fieldName: "gcms",
         batch: true,
-        url:
-          process.env.GRAPH_CMS_KEY ||
-          `https://api-us-east-1.graphcms.com/v2/ckccyan400myy01z03afjg08y/master`,
+        url: process.env.GRAPH_CMS_KEY,
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `limelight`,
-          `source sans pro\:300,400,400i,700`, // specify font weights and styles
-        ],
-        display: "swap",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `tomato`,
-        // Disable the loading spinner.
-        showSpinner: false,
-      },
-    },
-    {
-      resolve: "gatsby-source-custom-api",
-      options: {
-        url:
-          process.env.GRAPH_CMS_KEY ||
-          `https://api-us-east-1.graphcms.com/v2/ckccyan400myy01z03afjg08y/master`,
-      },
-    },
+
     {
       resolve: "gatsby-plugin-chakra-ui",
       options: {

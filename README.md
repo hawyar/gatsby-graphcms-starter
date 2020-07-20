@@ -8,11 +8,14 @@ Live Demo: https://gatsby-graphcms.netlify.app
 
 ## Features
 
-- Webhooks - automatic production deploy after new post
-- Easily add and edit posts with GraphCMS's easy-to-use UI
+- Customizable theme
 - Tag-separted blog posts
+- Webhooks - automatic production deploy after new post
+- Easily add, edit, delete posts with GraphCMS's easy-to-use UI
 - Supports multiple authors
-- Select Featured Posts
+- Featured posts section
+- Editor's chioce section
+
 - Editor's Pick Section
 - Customizable theme
 - Styled with [Chakra-ui](https://chakra-ui.com/)'s theme and components
@@ -22,7 +25,7 @@ Live Demo: https://gatsby-graphcms.netlify.app
 - Google Analytics
 - Responsive layout
 
-#### Coming soon:
+#### In progress:
 
 - [x] ~~Google Analytics~~
 - [ ] RSS feed
