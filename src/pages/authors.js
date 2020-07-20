@@ -16,11 +16,13 @@ const author = ({ data }) => {
           {" "}
           <Heading>Our creative team</Heading>
           <Grid
+            gridTemplateColumns={{ sm: "1fr", md: "1fr 1fr" }}
+            gridTemplateRows={{ sm: "1fr", base: "1fr 1fr" }}
+            margin="0 auto"
+            gridColumnGap="90px"
             mt={8}
             width="100%"
-            gridTemplateColumns="1fr 1fr"
-            gridColumnGap="20"
-            gridRowGap="16"
+            gridRowGap={12}
           >
             {data.gcms.authors.map((author) => {
               return <AuthorCard data={author} key={author.name} />

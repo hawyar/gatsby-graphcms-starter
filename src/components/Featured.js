@@ -1,49 +1,49 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import {
-  Box,
-  Image,
-  Text,
-  Link,
-  Badge,
-  Divider,
-  Flex,
-  Avatar,
-} from "@chakra-ui/core"
+import React, { Fragment } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { Box, Text, Link, Badge, Divider, Flex, Avatar } from "@chakra-ui/core"
+import GraphImg from "graphcms-image"
 import readingTime from "reading-time"
 import { Link as GatsbyLink } from "gatsby"
 
 const rTime = (text) => readingTime(text)
-const Featured = () => (
-  <StaticQuery
-    query={graphql`
-      query Featured {
-        gcms {
-          posts(where: { homePageFeatured: true }) {
-            slug
-            publishedAt
-            tags
-            title
-            excerpt
-            coverImage {
-              url(transformation: { image: { resize: { width: 1400 } } })
+
+const Featured = () => {
+  const data = useStaticQuery(graphql`
+    {
+      gcms {
+        posts(where: { homePageFeatured: true }) {
+          slug
+          publishedAt
+          tags
+          title
+          excerpt
+          coverImage {
+            handle
+            height
+            width
+          }
+          content {
+            text
+          }
+          homePageFeatured
+          author {
+            picture {
+              url(transformation: { image: { resize: { width: 120 } } })
             }
-            content {
-              text
-            }
-            homePageFeatured
-            author {
-              picture {
-                url(transformation: { image: { resize: { width: 120 } } })
-              }
-              name
-              bibliography
-            }
+            name
+            bibliography
           }
         }
       }
-    `}
-    render={(data) => (
+    }
+  `)
+
+  const ImgShape = {
+    ...data.gcms.posts[0].coverImage,
+  }
+
+  return (
+    <Fragment>
       <div>
         <Box
           as="article"
@@ -55,13 +55,15 @@ const Featured = () => (
           color="white"
         >
           <Box>
-            <Image
-              width="1400px"
-              height={{ sm: "250px", md: "390px" }}
-              objectFit="cover"
-              src={data.gcms.posts[0].coverImage.url}
-              alt="Featured Image"
-            />
+            <Box width="690px" height={{ sm: "250px", md: "390px" }}>
+              <GraphImg
+                withWebp="true"
+                image={ImgShape}
+                maxWidth="1400"
+                fit="scale"
+                alt="Featured Image"
+              />
+            </Box>
           </Box>
           <Box mt={{ base: 6, lg: 0 }} ml={{ base: 0, lg: 6 }}>
             <Badge
@@ -106,8 +108,8 @@ const Featured = () => (
 
         <Divider width={{ base: "85%", lg: "70%" }} margin="0 auto" />
       </div>
-    )}
-  />
-)
+    </Fragment>
+  )
+}
 
 export default Featured

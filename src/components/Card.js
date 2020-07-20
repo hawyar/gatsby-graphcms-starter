@@ -1,22 +1,29 @@
 import React from "react"
-import { Box, Image, Badge, Text, Link } from "@chakra-ui/core"
+import { Box, Badge, Text, Link } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import readingTime from "reading-time"
+import GraphImg from "graphcms-image"
 
 const rTime = (text) => readingTime(text)
 
 const Card = ({ data }) => {
+  const ImgShape = {
+    ...data.coverImage,
+  }
+  console.log(ImgShape)
   return (
     <div>
       <Box>
         <Box>
-          <Image
-            height="auto"
-            width="100%"
-            objectFit="cover"
-            src={data.coverImage.url}
-            alt="Protests"
-          />
+          <Box width="450px" height="250px">
+            <GraphImg
+              withWebp="true"
+              image={ImgShape}
+              maxWidth="320"
+              fit="scale"
+              alt="Featured Image"
+            />
+          </Box>
         </Box>
         <Box mt={3} width="100%">
           <Badge

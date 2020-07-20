@@ -32,9 +32,9 @@ const EditorsPick = () => {
                     publishedAt
                     tags
                     coverImage {
-                      url(
-                        transformation: { image: { resize: { width: 1400 } } }
-                      )
+                      handle
+                      height
+                      width
                     }
                     content {
                       text

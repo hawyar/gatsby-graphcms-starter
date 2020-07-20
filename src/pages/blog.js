@@ -34,7 +34,6 @@ const blog = ({ data }) => {
 
 export default blog
 
-// we can do page query
 export const query = graphql`
   {
     gcms {
@@ -45,7 +44,9 @@ export const query = graphql`
         publishedAt
         tags
         coverImage {
-          url(transformation: { image: { resize: { width: 1400 } } })
+          handle
+          height
+          width
         }
         content {
           text
