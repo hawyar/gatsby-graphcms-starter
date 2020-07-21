@@ -6,16 +6,15 @@ Live Demo: https://gatsby-graphcms.netlify.app
 
 ## Features
 
-- Deployed to Netlify
+- Blazing fast performance - Run PageSpeed test [here](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fgatsby-graphcms.netlify.app%2F&tab=desktop)
+- Easy deploy to Netlify
 - Styled with [Chakra-ui](https://chakra-ui.com/)'s base theme and components
 - Tag-separted blog posts
-- Webhooks - automatic production deploy after new post
+- Automatic Deploys - with GraphCMS Webhooks
 - Easily add, edit, delete posts with GraphCMS's easy-to-use UI
-- Supports multiple authors
 - Featured posts section
-- Editor's chioce section
+- Editor's choice section
 - Blazing fast build time
-- Automatic Deploys with GitHub commit
 - Google Analytics
 - RSS feed
 
