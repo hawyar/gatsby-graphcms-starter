@@ -55,12 +55,12 @@ const Featured = () => {
           color="white"
         >
           <Box>
-            <Box width="690px" height={{ sm: "250px", md: "390px" }}>
+            <Box width={{ sm: "100%", md: "690px" }}>
               <GraphImg
                 withWebp="true"
                 image={ImgShape}
                 maxWidth="1400"
-                fit="scale"
+                fit="crop"
                 alt="Featured Image"
               />
             </Box>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Badge, Text, Link } from "@chakra-ui/core"
+import { Box, Badge, Text, Link, Grid } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import readingTime from "reading-time"
 import GraphImg from "graphcms-image"
@@ -10,30 +10,37 @@ const Card = ({ data }) => {
   const ImgShape = {
     ...data.coverImage,
   }
-  console.log(ImgShape)
   return (
     <div>
       <Box>
         <Box>
-          <Box width="450px" height="250px">
+          <Box width={{ sm: "100%", lg: "100%" }}>
             <GraphImg
+              height="520px"
               withWebp="true"
               image={ImgShape}
               maxWidth="320"
-              fit="scale"
+              fit="max"
+              style={{ height: "250px" }}
               alt="Featured Image"
             />
           </Box>
         </Box>
         <Box mt={3} width="100%">
-          <Badge
-            fontWeight="bold"
-            textTransform="uppercase"
-            fontSize="xs"
-            letterSpacing="wide"
-          >
-            {data.tags}
-          </Badge>
+          {data.tags.map((el) => {
+            return (
+              <Badge
+                mr={3}
+                fontWeight="bold"
+                textTransform="uppercase"
+                fontSize="xs"
+                letterSpacing="wide"
+              >
+                {el}
+              </Badge>
+            )
+          })}
+
           <Link
             color="white"
             as={GatsbyLink}

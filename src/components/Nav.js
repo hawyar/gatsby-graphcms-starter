@@ -61,6 +61,8 @@ const Nav = () => {
 
           <div>
             <Button
+              as="a"
+              href="https://github.com/hawyar/gatsby-graphcms-starter"
               fontSize="xs"
               size="sm"
               variant="outline"

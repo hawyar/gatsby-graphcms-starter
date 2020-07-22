@@ -14,9 +14,9 @@ Live Demo: https://gatsby-graphcms.netlify.app
 - Easily add, edit, delete posts with GraphCMS's easy-to-use UI
 - Featured posts section
 - Editor's choice section
-- Blazing fast build time
 - Google Analytics
 - RSS feed
+- Blazing fast build time (faster subsequent build)
 
 ### In progress:
 

@@ -15,7 +15,7 @@ const EditorsPick = () => {
         width={{ base: "85%", lg: "70%" }}
       >
         <Grid
-          gridTemplateColumns={{ sm: "1fr", md: "1fr 1fr" }}
+          gridTemplateColumns={{ sm: "1fr", lg: "1fr 1fr" }}
           gridTemplateRows={{ sm: "1fr", base: "1fr 1fr" }}
           margin="0 auto"
           gridColumnGap="90px"

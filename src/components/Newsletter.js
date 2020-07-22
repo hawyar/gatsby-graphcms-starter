@@ -13,8 +13,6 @@ const Newsletter = () => {
       <Box
         pt={20}
         pb={20}
-        pl={{ sm: 6 }}
-        pr={{ sm: 6 }}
         display="flex"
         flexDirection="column"
         margin="0 auto"
