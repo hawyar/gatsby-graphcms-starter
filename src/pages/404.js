@@ -1,12 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import { Link, Box } from "gatsby"
+import SEO from "../components/SEO/SEO"
 const NotFoundPage = () => {
   return (
     <div>
       <SEO title="404: Not Found" />
-      <p>Four'0 Four</p>
-      <Link to="/">Back home</Link>
+      <Box>
+        <Link to="/">Back home</Link>
+      </Box>
     </div>
   )
 }

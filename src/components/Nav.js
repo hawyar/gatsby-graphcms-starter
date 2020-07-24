@@ -4,8 +4,7 @@ import { Link, Box, Button } from "@chakra-ui/core"
 import Headroom from "react-headroom"
 
 const activeStyles = {
-  bg: "red.500",
-  color: "red",
+  color: "#D4493F",
 }
 const Nav = () => {
   return (
@@ -25,36 +24,18 @@ const Nav = () => {
           margin="0 auto"
           alignItems="center"
         >
-          <Box display="flex">
-            <Link
-              mr={6}
-              as={GatsbyLink}
-              color="white"
-              fontSize="sm"
-              to="/"
-              activeStyles={activeStyles}
-            >
+          <Box display="flex" color="white">
+            {/* activeStles does not work here */}
+            <Link mr={6} as={GatsbyLink} fontSize="sm" to="/">
               Home
             </Link>
-            <Link mr={6} as={GatsbyLink} color="white" fontSize="sm" to="/blog">
+            <Link mr={6} as={GatsbyLink} fontSize="sm" to="/blog">
               Blog
             </Link>
-            <Link
-              mr={6}
-              as={GatsbyLink}
-              color="white"
-              fontSize="sm"
-              to="/authors"
-            >
+            <Link mr={6} as={GatsbyLink} fontSize="sm" to="/authors">
               Authors
             </Link>
-            <Link
-              mr={6}
-              as={GatsbyLink}
-              color="white"
-              fontSize="sm"
-              to="/about"
-            >
+            <Link mr={6} as={GatsbyLink} fontSize="sm" to="/about">
               About
             </Link>
           </Box>

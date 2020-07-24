@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider, CSSReset } from "@chakra-ui/core"
-import theme from "../themes/theme"
+import theme from "../Themes/theme"
 const Layout = (props) => {
   return (
     <div>

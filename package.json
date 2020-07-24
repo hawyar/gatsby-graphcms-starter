@@ -22,7 +22,7 @@
     "emotion-theming": "^10.0.27",
     "framer-motion": "^1.10.3",
     "gatsby": "^2.20.12",
-    "gatsby-cli": "^2.12.60",
+    "gatsby-cli": "^2.12.66",
     "gatsby-plugin-chakra-ui": "^0.1.4",
     "gatsby-plugin-feed": "^2.5.11",
     "gatsby-plugin-google-analytics": "^2.3.10",

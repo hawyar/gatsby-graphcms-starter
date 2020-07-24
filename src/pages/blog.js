@@ -1,10 +1,10 @@
 import React from "react"
 import Nav from "../components/Nav"
 import { Heading, Box, Grid } from "@chakra-ui/core"
-import Card from "../components/Card"
+import Card from "../components/Cards/Card"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
-import SEO from "../components/SEO"
+import SEO from "../components/SEO/SEO"
 const blog = ({ data }) => {
   return (
     <div>

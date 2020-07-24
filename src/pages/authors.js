@@ -3,8 +3,8 @@ import Nav from "../components/Nav"
 import { Heading, Box, Grid } from "@chakra-ui/core"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
-import AuthorCard from "../components/AuthorCard"
-import SEO from "../components/SEO"
+import AuthorCard from "../components/Cards/Author"
+import SEO from "../components/SEO/SEO"
 const author = ({ data }) => {
   console.log(data)
   return (

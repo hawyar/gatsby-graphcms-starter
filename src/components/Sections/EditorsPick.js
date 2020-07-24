@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Grid } from "@chakra-ui/core"
-import Card from "./Card"
+import Card from "../Cards/Card"
 import { StaticQuery, graphql } from "gatsby"
 
 const EditorsPick = () => {

@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Nav from "../components/Nav"
 import readingTime from "reading-time"
 import Footer from "../components/Footer"
-import SEO from "../components/SEO"
+import SEO from "../components/SEO/SEO"
 import GraphImg from "graphcms-image"
 
 const rTime = (text) => readingTime(text)
