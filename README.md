@@ -18,21 +18,11 @@ Live Demo: https://gatsby-graphcms.netlify.app
 - RSS feed
 - Blazing fast build time (faster subsequent build)
 
-### In progress:
-
-- [x] ~~Google Analytics~~
-- [x] ~~RSS feed~~
-- [ ] Incremental build
-- [ ] Dark Mode
-- [ ] Mailchimp support
-- [ ] Modify pages directly from GraphCMS
-- [ ] A/B testing with Google Analytics
-
-## Prerequisites
+## Pre-requisites
 
 - [Node](https://nodejs.org/en/)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
-- [GraphCMS account](https://graphcms.com/) (FREE)
+- GraphCMS account - Select the **blog starter** to follow to follow)
 
 ## Setup
 
@@ -83,6 +73,13 @@ GRAPH_CMS_KEY = PLACE_KEY_HERE
 2. Check the **Content from stage Published** box.
 
 **Note**: GraphCMS allows us to fetch DRAFT and PUBSLISHED posts. For production only check the PUBSLISHED box.
+
+## Additional Configuration
+
+To have sections such as Featured and Editor's choice we have to make some changes to GraphCMS.
+
+1. Log in to GraphCMS and select your project.
+2.
 
 ## Contributing
 

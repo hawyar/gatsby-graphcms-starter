@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Badge, Text, Link, Grid } from "@chakra-ui/core"
+import { Box, Badge, Text, Link } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import readingTime from "reading-time"
 import GraphImg from "graphcms-image"
