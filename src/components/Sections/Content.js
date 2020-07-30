@@ -1,8 +1,8 @@
 import React from "react"
 import { Box } from "@chakra-ui/core"
-import Featured from "./Sections/Featured"
-import EditorsPick from "../components/Sections/EditorsPick"
-import LargeCard from "./Sections/LargeCard"
+import Featured from "./Featured"
+import EditorsPick from "./EditorsPick"
+import LargeCard from "./LargeCard"
 const Content = () => {
   return (
     <div>

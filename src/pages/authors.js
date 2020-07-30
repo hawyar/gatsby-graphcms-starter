@@ -1,10 +1,10 @@
 import React from "react"
-import Nav from "../components/Nav"
+import Nav from "../components/sections/Nav"
 import { Heading, Box, Grid } from "@chakra-ui/core"
-import Footer from "../components/Footer"
+import Footer from "../components/sections/Footer"
 import { graphql } from "gatsby"
-import AuthorCard from "../components/Cards/Author"
-import SEO from "../components/SEO/SEO"
+import AuthorCard from "../components/cards/Author"
+import SEO from "../components/seo/SEO"
 const author = ({ data }) => {
   console.log(data)
   return (

@@ -1,7 +1,7 @@
 import React from "react"
-import Nav from "../components/Nav"
+import Nav from "../components/sections/Nav"
 import { Box, Heading, Text } from "@chakra-ui/core"
-import Footer from "../components/Footer"
+import Footer from "../components/sections/Footer"
 const about = () => {
   return (
     <div>

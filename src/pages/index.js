@@ -1,10 +1,10 @@
 import React from "react"
-import Hero from "../components/Hero"
+import Hero from "../components/sections/Hero"
 import Layout from "../components/Layout/Layout"
-import Content from "../components/Content"
-import Footer from "../components/Footer"
-import Newsletter from "../components/Newsletter"
-import SEO from "../components/SEO/SEO"
+import Content from "../components/sections/Content"
+import Footer from "../components/sections/Footer"
+import Newsletter from "../components/sections/Newsletter"
+import SEO from "../components/seo/SEO"
 const Index = () => {
   return (
     <div>

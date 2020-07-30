@@ -1,10 +1,10 @@
 import React from "react"
 import { Heading, Box, Text, Badge } from "@chakra-ui/core"
 import { graphql } from "gatsby"
-import Nav from "../components/Nav"
+import Nav from "../components/sections/Nav"
 import readingTime from "reading-time"
-import Footer from "../components/Footer"
-import SEO from "../components/SEO/SEO"
+import Footer from "../components/sections/Footer"
+import SEO from "../components/seo/SEO"
 import GraphImg from "graphcms-image"
 
 const rTime = (text) => readingTime(text)

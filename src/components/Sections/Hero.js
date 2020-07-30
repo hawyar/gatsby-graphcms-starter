@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Heading } from "@chakra-ui/core"
-import Nav from "../components/Nav"
+import Nav from "./Nav"
 
 const Hero = () => {
   return (

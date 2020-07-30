@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Box } from "@chakra-ui/core"
-import SEO from "../components/SEO/SEO"
+import SEO from "../components/seo/SEO"
 const NotFoundPage = () => {
   return (
     <div>

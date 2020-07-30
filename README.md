@@ -74,12 +74,9 @@ GRAPH_CMS_KEY = PLACE_KEY_HERE
 
 **Note**: GraphCMS allows us to fetch DRAFT and PUBSLISHED posts. For production only check the PUBSLISHED box.
 
-## Additional Configuration
+## Additional GraphCMS Configuration
 
-To have sections such as Featured and Editor's choice we have to make some changes to GraphCMS.
-
-1. Log in to GraphCMS and select your project.
-2.
+Coming soon
 
 ## Contributing
 

@@ -3,9 +3,6 @@ import { Link as GatsbyLink } from "gatsby"
 import { Link, Box, Button } from "@chakra-ui/core"
 import Headroom from "react-headroom"
 
-const activeStyles = {
-  color: "#D4493F",
-}
 const Nav = () => {
   return (
     <div>
